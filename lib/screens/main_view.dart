@@ -26,14 +26,8 @@ class _MainViewState extends State<MainView> {
   int minutes = 0;
   int secounds = 0;
 
-  // var state = FlutterVpnState.disconnected;
-  // CharonErrorState? charonState = CharonErrorState.NO_ERROR;
-
   @override
   void initState() {
-    // FlutterVpn.prepare();
-    // FlutterVpn.onStateChanged.listen((s) => setState(() => state = s));
-
     super.initState();
   }
 
