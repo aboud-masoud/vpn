@@ -17,11 +17,8 @@ class _MainViewState extends State<MainView> {
   final storage = const FlutterSecureStorage();
 
   VPNStatus status = VPNStatus.off;
-
   int counter = 3;
-
   Timer? myTimer;
-
   int hours = 0;
   int minutes = 0;
   int secounds = 0;
