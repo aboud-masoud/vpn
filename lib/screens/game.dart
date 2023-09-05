@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:vpn/obj/item.dart';
 import 'package:vpn/widgets/view.dart';
 
@@ -26,11 +25,8 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
-  // final storage = const FlutterSecureStorage();
-
   @override
   void initState() {
-    // storage.write(key: "counter", value: "3");
     super.initState();
   }
 
