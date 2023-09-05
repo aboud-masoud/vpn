@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:vpn/screens/game.dart';
-// import 'package:flutter_vpn/flutter_vpn.dart';
-// import 'package:flutter_vpn/state.dart';
 
 enum VPNStatus { on, off }
 
@@ -125,9 +123,7 @@ class _MainViewState extends State<MainView> {
                         child: Icon(
                           Icons.power_settings_new,
                           size: 70,
-                          color: status == VPNStatus.on
-                              ? Colors.green
-                              : Colors.red,
+                          color: status == VPNStatus.on ? Colors.green : Colors.red,
                         ),
                         onPressed: () {
                           if (status == VPNStatus.off) {
@@ -155,21 +151,18 @@ class _MainViewState extends State<MainView> {
                       : counter == 0
                           ? const Text(
                               "You Can't Play",
-                              style: const TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                             )
                           : Container(),
                   status == VPNStatus.on
                       ? Text(
                           "${timeFormatter(hours)}:${timeFormatter(minutes)}:${timeFormatter(secounds)}",
-                          style: const TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                         )
                       : counter == 0
                           ? TextButton(
                               onPressed: () {
-                                Navigator.of(context)
-                                    .push(MaterialPageRoute(builder: (ctx) {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
                                   return const GameScreen();
                                 }));
                               },
